@@ -4,14 +4,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
   margin-bottom: 20px;
 }
 
 .cardWrapper {
   display: grid;
   grid-template-columns: repeat(4, 2fr);
-  grid-gap: 10px;
+  grid-gap: 0.623em;
 }
 
 .loadingStyle {

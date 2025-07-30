@@ -13,7 +13,7 @@ const footer = () => {
                 <Link href='/privacy'>Privacy</Link>
                 <Link href='/terms'>Terms</Link>
             </div>
-            <div className={styles.footerCopyright}>© Copyrights 2025 | Facebook </div>
+            <div className={styles.footerCopyright}>© Copyrights {new Date().getFullYear()} | Facebook </div>
         </div>
     );
 }

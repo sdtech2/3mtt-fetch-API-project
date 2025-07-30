@@ -1,7 +1,7 @@
 'use Client';
 import styles from './index.module.css'
 
-const postCard = ({title: name, description}) => {
+const PostCard = ({title: name, description}) => {
     return (
         <div className={styles.cardContainer}>
             <div className={styles.cardHeader}>{name}</div>
@@ -10,4 +10,4 @@ const postCard = ({title: name, description}) => {
     );
 }
  
-export default postCard;
+export default PostCard;

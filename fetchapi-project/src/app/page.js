@@ -14,18 +14,16 @@ export default function Home() {
     setPending(true);
     setError(null);
 
-    const response = await fetch('https://jsonplaceholder.typicode.com/posts')
-    .then((res) => {
+    try{
+      const res = await fetch('https://jsonplaceholder.typicode.com/posts');
       if(!res.ok) {
         throw new Error('cant fetch data')
       }
-      return res.json()
-    })
-    .catch(err => {
-      setError(err.message);
-      setPending(false);
-    })
-    setData(response.slice(0, 10));
+      const data = await res.json();
+      setData(data.slice(0, 10));
+    } catch(err) {
+      setError(err.message)
+    }
     setPending(false);
   }
 
@@ -36,9 +34,11 @@ export default function Home() {
   if (pending) {
     return <div className={styles.loadingStyle}>Loading...</div>
   }
-  
-  { error && <div>{ error }</div> }
 
+  if(error) {
+    return <div className={styles.errorStyle}>{ error }</div>
+  }
+  
   return (
 
     <div className={styles.page}>
