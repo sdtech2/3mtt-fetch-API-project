@@ -1,0 +1,27 @@
+.cardContainer {
+    height: 200px;
+    max-height: 200px;
+    width: 250px;
+    background-color: #ffffff;
+    color: #2d2d2d;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(96, 96, 96, 0.08);
+    cursor: pointer;
+}
+
+.cardContainer .cardHeader {
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #f93d66;
+  margin-bottom: 8px;
+}
+
+.cardContainer .cardBody {
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.6;
+}
